@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/detail_back"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/back"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/main_white" />
+
+    <TextView
+        android:id="@+id/detail_title"
+        style="@style/bold"
+        android:text="CO2 Sensor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/detail_back" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/detail_vp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@+id/detail_title" />
+
+    <ImageView
+        android:id="@+id/detail_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/j"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/detail_vp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TableRow
+        android:id="@+id/detail_sort_tr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/detail_progress"
+        android:layout_marginTop="50dp">
+        <TextView
+            android:id="@+id/detail_auto"
+            style="@style/medium"
+            android:background="@drawable/detail_auto_bg"
+            android:text="Auto"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/home_statistic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/home_statistic" />
+        <TextView
+            android:id="@+id/detail_home"
+            style="@style/medium"
+            android:background="@drawable/detail_auto_bg"
+            android:text="Home"
+            android:textSize="14sp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/home_statistic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/home_statistic" />
+        <TextView
+            android:id="@+id/detail_away"
+            style="@style/medium"
+            android:background="@drawable/detail_auto_bg"
+            android:text="Away"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/home_statistic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/home_statistic" />
+    </TableRow>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
