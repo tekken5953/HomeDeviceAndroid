@@ -87,6 +87,4 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/home_statistic" />
     </TableRow>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
